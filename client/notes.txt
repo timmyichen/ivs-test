@@ -1,0 +1,6 @@
+leon streams:
+* 20/mo @ $2/hr = $40/mo
+* 1000 ppl, 20 hrs/mo = 20,000 hours/mo
+  * 10,000 @ $0.15/hr = $1500/mo
+  * 10,000 @ $0.14/hr = $1400/mo
+  
