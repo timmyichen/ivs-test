@@ -11,6 +11,7 @@ async function startServer() {
 
   app.use(express.json())
   app.use(express.urlencoded({ extended: true }))
+  app.use(express.static('public'))
 
   app.get('/', (req, res) => {
     nextApp.render(req, res, '/index', parse(req.url, true).query)

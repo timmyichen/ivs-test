@@ -1,8 +1,8 @@
 import React from 'react'
 import IVSBroadcastClient, { AmazonIVSBroadcastClient } from 'amazon-ivs-web-broadcast'
 
-const INGEST_ENDPOINT = 'ingest endpoint here'
-const SECRET_KEY = 'secret key here'
+const INGEST_ENDPOINT = 'rtmps://1423c2b23654.global-contribute.live-video.net:443/app/'
+const STREAM_KEY = 'sk_us-west-2_HusLE9oPfxIh_ZubyOux8SYvBCDZBd4YUBgkqqAzeEn'
 
 async function handlePermissions() {
   let permissions = {
@@ -75,7 +75,7 @@ const TestComponent: React.FC = () => {
     await clientRef.current.addAudioInputDevice(microphoneStream, 'mic1')
 
     // this will probably live on the server?
-    const broadcast = await clientRef.current.startBroadcast(SECRET_KEY)
+    const broadcast = await clientRef.current.startBroadcast(STREAM_KEY)
     console.log('started broadcast')
   }
 

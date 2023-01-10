@@ -10,7 +10,7 @@ import wasmBinaryPath from 'amazon-ivs-player/dist/assets/amazon-ivs-wasmworker.
 // @ts-ignore
 import wasmWorkerPath from 'amazon-ivs-player/dist/assets/amazon-ivs-wasmworker.min.js';
 
-const PLAYBACK_URL = 'PLAYBACK_URL_HERE'
+const PLAYBACK_URL = 'https://1423c2b23654.us-west-2.playback.live-video.net/api/video/v1/us-west-2.855361726327.channel.6JpJZajSlp8R.m3u8'
 
 const Viewer: React.FC = () => {
   const outputRef = React.useRef<HTMLVideoElement | null>(null)
@@ -19,8 +19,8 @@ const Viewer: React.FC = () => {
   const joinBroadcast = () => {
     if (IVSPlayer.isPlayerSupported) {
       const player = IVSPlayer.create({
-        wasmBinary: wasmBinaryPath,
-        wasmWorker: wasmWorkerPath,
+        wasmBinary: '/assets/amazon-ivs-wasmworker.min.wasm',
+        wasmWorker: '/assets/amazon-ivs-wasmworker.min.js',
       })
 
       player.attachHTMLVideoElement(outputRef.current!)
